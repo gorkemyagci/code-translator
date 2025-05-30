@@ -1,0 +1,189 @@
+{
+  "name": "code-translator",
+  "displayName": "Code Translator",
+  "description": "Professional VS Code extension for translating Turkish code to Python. Includes comprehensive dictionary, helper functions, and intelligent code translation features with webview dictionary display.",
+  "version": "1.0.0",
+  "publisher": "your-publisher-name",
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@example.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/your-username/code-translator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/code-translator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/code-translator/issues"
+  },
+  "keywords": [
+    "turkish",
+    "python",
+    "translator",
+    "code-translation",
+    "localization",
+    "türkçe",
+    "programming",
+    "education",
+    "beginner-friendly"
+  ],
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Education",
+    "Other",
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:python"
+  ],
+  "main": "./out/extension.js",
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#3776ab",
+    "theme": "dark"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "code-translator.translate",
+        "title": "Seçili Metni Çevir",
+        "category": "Code Translator"
+      },
+      {
+        "command": "code-translator.translateAll",
+        "title": "Tüm Dosyayı Çevir",
+        "category": "Code Translator"
+      },
+      {
+        "command": "code-translator.createHelperFunctions",
+        "title": "Türkçe Helper Dosyası Oluştur",
+        "category": "Code Translator"
+      },
+      {
+        "command": "code-translator.showDictionary",
+        "title": "Türkçe-Python Sözlüğünü Göster",
+        "category": "Code Translator"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "code-translator.translate",
+        "key": "ctrl+shift+t",
+        "mac": "cmd+shift+t",
+        "when": "editorTextFocus && editorHasSelection"
+      },
+      {
+        "command": "code-translator.translateAll",
+        "key": "ctrl+shift+alt+t",
+        "mac": "cmd+shift+alt+t",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "code-translator.showDictionary",
+        "key": "ctrl+shift+d",
+        "mac": "cmd+shift+d"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorHasSelection",
+          "command": "code-translator.translate",
+          "group": "1_modification@1"
+        },
+        {
+          "command": "code-translator.translateAll",
+          "group": "1_modification@2"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "code-translator.translate",
+          "when": "editorTextFocus"
+        },
+        {
+          "command": "code-translator.translateAll",
+          "when": "editorTextFocus"
+        },
+        {
+          "command": "code-translator.createHelperFunctions"
+        },
+        {
+          "command": "code-translator.showDictionary"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Code Translator",
+      "properties": {
+        "codeTranslator.autoTranslate": {
+          "type": "boolean",
+          "default": false,
+          "description": "Otomatik çeviri özelliğini etkinleştir"
+        },
+        "codeTranslator.preserveComments": {
+          "type": "boolean",
+          "default": true,
+          "description": "Çeviri sırasında yorumları koru"
+        },
+        "codeTranslator.caseSensitive": {
+          "type": "boolean",
+          "default": false,
+          "description": "Büyük/küçük harf duyarlı çeviri"
+        },
+        "codeTranslator.customDictionary": {
+          "type": "object",
+          "default": {},
+          "description": "Kişisel çeviri sözlüğü eklemeleri"
+        },
+        "codeTranslator.showNotifications": {
+          "type": "boolean",
+          "default": true,
+          "description": "Çeviri bildirimlerini göster"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "lint:fix": "eslint src --ext ts --fix",
+    "test": "vscode-test",
+    "package": "vsce package",
+    "publish": "vsce publish",
+    "clean": "rimraf out"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.100.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2",
+    "@vscode/vsce": "^3.2.0",
+    "rimraf": "^6.0.1"
+  },
+  "dependencies": {},
+  "extensionDependencies": [],
+  "badges": [
+    {
+      "url": "https://img.shields.io/visual-studio-marketplace/v/your-publisher-name.code-translator",
+      "href": "https://marketplace.visualstudio.com/items?itemName=your-publisher-name.code-translator",
+      "description": "VS Code Marketplace Version"
+    },
+    {
+      "url": "https://img.shields.io/visual-studio-marketplace/i/your-publisher-name.code-translator",
+      "href": "https://marketplace.visualstudio.com/items?itemName=your-publisher-name.code-translator",
+      "description": "VS Code Marketplace Installs"
+    }
+  ]
+}
