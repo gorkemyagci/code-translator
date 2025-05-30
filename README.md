@@ -10,7 +10,7 @@ Türkçe kod yazan geliştiricilerin Python kodlarını profesyonel İngilizce s
 - **Bağlam Duyarlı Çeviri**: Kod yapısını koruyarak anlamlı çeviriler yapar
 
 ### 📚 Kapsamlı Sözlük Sistemi
-- 500+ Türkçe-İngilizce programlama terimi
+- 200+ Türkçe-İngilizce programlama terimi
 - Webview tabanlı interaktif sözlük görüntüleyici
 - Kişisel sözlük ekleme özelliği
 
@@ -65,7 +65,7 @@ Bu uzantı aşağıdaki ayarları ekler:
 
 ### Sonra:
 ```python
-yazdir("hello world!")
+yaz("hello world!")
 ```
 
 ## 🐛 Bilinen Sorunlar
