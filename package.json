@@ -1,9 +1,9 @@
 {
-  "name": "code-translator",
-  "displayName": "Code Translator",
+  "name": "tr-python-translator",
+  "displayName": "Turkish Python Helper - Türkçe Kod Çevirici",
   "description": "Professional VS Code extension for translating Turkish code to Python. Includes comprehensive dictionary, helper functions, and intelligent code translation features with webview dictionary display.",
   "version": "1.0.0",
-  "publisher": "your-publisher-name",
+  "publisher": "gorkemyagci",
   "author": {
     "name": "Your Name",
     "email": "your.email@example.com"
